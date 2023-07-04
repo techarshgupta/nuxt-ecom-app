@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-md rounded-xl lg:w-68 p-4 self-stretch pb-6 relative">
+  <div class="bg-white shadow-md rounded-xl lg:w-68 p-4 self-stretch pb-6 relative h-fit">
     <div class="w-56 h-56">
       <img
         class="rounded-2xl shadow-md object-cover w-full h-full"
