@@ -158,9 +158,9 @@ onMounted(() => {
 const cart = computed(() => store.cart);
 const whislist = computed(() => store.whislist);
 const onClickAdd = () => {
-  const item = cart.value?.filter((item) => item.id == activeProduct.id);
+  const item = cart.value?.filter((item) => item.id == activeProduct.value.id);
   if (!item.length) {
-    store.addToCart(activeProduct);
+    store.addToCart(activeProduct.value);
     addToCart.value = { show: true, msg: 'Item added to cart successfully.'};
   } else {
     addToCart.value = {show: true, msg: 'Item already present in cart.'};
@@ -170,7 +170,7 @@ const onClickAdd = () => {
   }, 2000);
 };
 const onClickWish = () => {
-  const item = whislist.value?.filter((item) => item.id == activeProduct.id);
+  const item = whislist.value?.filter((item) => item.id == activeProduct.value.id);
   if (!item.length) {
     store.addToWish(activeProduct.value);
     addToCart.value = { show: true, msg: 'Item added to wishlist successfully.'};

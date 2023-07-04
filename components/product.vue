@@ -81,7 +81,6 @@ const onClickAdd = () => {
   } else {
     emit('addToCart', {show: true, msg: 'Item already present in cart.'});
   }
-  console.log(props.isWish);
   if (props.isWish) {
     store.removeWishItem(props.product.id);
   }
