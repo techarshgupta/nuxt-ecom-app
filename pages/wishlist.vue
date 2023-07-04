@@ -1,4 +1,11 @@
 <template>
+    <div
+      class="flex items-center mt-2 pb-2 border-b-2 border-gray-300"
+    >
+      <div class="text-2xl font-semibold ml-5">
+        My Wishlist
+      </div>
+    </div>
   <div class="flex">
     <AppProducts
       v-if="getProducts && getProducts.length"
